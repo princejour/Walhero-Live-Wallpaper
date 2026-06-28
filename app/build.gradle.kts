@@ -11,8 +11,17 @@ android {
         applicationId = "com.walhero.livewallpaper"
         minSdk = 23
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.0.2"
+    }
+
+    signingConfigs {
+        create("walheroRelease") {
+            storeFile = file(System.getenv("SIGNING_STORE_FILE"))
+            storePassword = System.getenv("SIGNING_STORE_PASSWORD")
+            keyAlias = System.getenv("SIGNING_KEY_ALIAS")
+            keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
+        }
     }
 
     buildTypes {
@@ -23,7 +32,7 @@ android {
         release {
             isDebuggable = false
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("walheroRelease")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
