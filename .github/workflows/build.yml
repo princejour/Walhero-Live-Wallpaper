@@ -23,16 +23,16 @@ jobs:
         with:
           gradle-version: '8.10.2'
 
-      - name: Build debug APK
-        run: gradle assembleDebug
+      - name: Build installable release APK
+        run: gradle assembleRelease
 
       - name: Rename APK
         run: |
           mkdir -p final-apk
-          cp app/build/outputs/apk/debug/app-debug.apk final-apk/Walhero-Live-Wallpaper-debug.apk
+          cp app/build/outputs/apk/release/app-release.apk final-apk/Walhero-Live-Wallpaper-install.apk
 
-      - name: Upload debug APK
+      - name: Upload install APK
         uses: actions/upload-artifact@v4
         with:
-          name: Walhero-Live-Wallpaper-debug-APK
-          path: final-apk/Walhero-Live-Wallpaper-debug.apk
+          name: Walhero-Live-Wallpaper-INSTALL-APK
+          path: final-apk/Walhero-Live-Wallpaper-install.apk
