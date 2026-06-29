@@ -1,5 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Walhero Live Wallpaper</string>
-    <string name="wallpaper_name">Walhero Video Wallpaper</string>
-    <string name="wallpaper_description">تعيين فيديو من الهاتف كخلفية متحركة.</string>
+    <string name="subtitle">Premium Video Wallpaper Experience</string>
+    <string name="video_ready">Video ready</string>
+    <string name="no_video_selected">No video selected</string>
+    <string name="your_video_is_ready">Your video is ready to set</string>
+    <string name="choose_video">Choose Video</string>
+    <string name="sound_on_off">Sound On / Off</string>
+    <string name="apply_live_wallpaper">Apply Live Wallpaper</string>
+    <string name="clear_video">Clear Video</string>
+    <string name="android_versions_info">On some Android versions, the system may apply the wallpaper to home and lock screens together.</string>
+    <string name="about">About</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="settings">Settings</string>
 </resources>
